@@ -13,11 +13,11 @@ The Students CRUD Application is a Python-based backend project developed using 
 ## Features
 - Add new student records
 - View all students
-- Search for a student by ID
+- View a student by ID
 - Update student details
 - Delete student records
 - Prevent duplicate email addresses
-- Handle students who are not found
+- Handle student records that do not exist
 
 ## Student Information
 Each student record contains:
@@ -39,7 +39,7 @@ cd Students_CRUD_Project
 python -m venv .venv
 ```
 
-### 3. Activate the Environment on Windows
+### 3. Activate the Virtual Environment on Windows
 ```powershell
 .venv\Scripts\activate
 ```
@@ -54,7 +54,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-The application runs at:
+The application will run at:
 http://127.0.0.1:8000
 
 ## API Documentation
@@ -65,11 +65,11 @@ http://127.0.0.1:8000/docs
 
 | Method | Endpoint | Description |
 |---|---|---|
-| POST | /students | Add a student |
-| GET | /students | View all students |
-| GET | /students/{student_id} | View a student by ID |
-| PUT | /students/{student_id} | Update student details |
-| DELETE | /students/{student_id} | Delete a student |
+| POST | `/students` | Add a student |
+| GET | `/students` | View all students |
+| GET | `/students/{student_id}` | View a student by ID |
+| PUT | `/students/{student_id}` | Update student details |
+| DELETE | `/students/{student_id}` | Delete a student |
 
 ## Database
 SQLite is used to store student records, and SQLAlchemy handles database operations.
